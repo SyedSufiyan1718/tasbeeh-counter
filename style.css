@@ -6,17 +6,40 @@
 }
 .main_sec {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgba(0, 20, 50, 0.256);
+  display: flex;
 }
 
 /* tasbeeh button Section */
 
 .tasbeeh_sec,
 .tasbeeh_login_sec {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   gap: 25px;
 }
+.tasbeeh_heading {
+  font-weight: 900;
+  color: white;
+  font-style: italic;
+  text-align: center;
+  margin: 28px 0;
+  text-transform: uppercase;
+  text-shadow: 1px 2px rgb(27, 27, 27);
+}
+.more {
+  border: none;
+  outline: none;
+  background-color: #b7c2ee;
+  color: #001e4b;
+  font-size: 14px;
+  padding: 6px 28px;
+  border-radius: 28px;
+  margin-bottom: 28px;
+  font-weight: bolder;
+}
+
 .tasbeeh_sec > button {
   width: 250px;
   padding: 6px 4px;
@@ -50,27 +73,14 @@
   transform: scale(1.1);
 }
 
-@media (max-width: 1150px) {
-  .tasbeeh_sec > button:hover{
-    background-color: #000;
-    color: white;
-    transform: scale(1);
-    width: 250px;
-  }
-   .tasbeeh_login_sec > button:hover {
-    transform: scale(1);
-   } 
-}
-
 /* Dashboard Section  */
 
 .dashboard_sec {
   width: calc(100% - 300px);
-  padding: 38px 50px;
+  padding: 16px 50px;
   box-sizing: border-box;
   display: flex;
-  gap: 10px;
-  align-items: center;
+  align-content: space-evenly;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -83,14 +93,15 @@
   text-shadow: 1px 2px gray;
 }
 .dashboard_sec > section {
+  display: flex;
   gap: 60px;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .dash_card {
-  width: 350px;
-  padding: 20px 32px;
+  width: 270px;
+  padding: 20px;
   border-bottom: 1px solid black;
   margin-bottom: 18px;
   display: flex;
@@ -102,9 +113,10 @@
   border-radius: 10px;
   border-bottom: 1px solid white;
   background-color: white;
+  max-width: 350px;
 }
 
-.dash_card > h2 {
+.dash_card > h3 {
   font-weight: 800;
   font-style: italic;
 }
@@ -149,7 +161,7 @@
   font-weight: bolder;
 }
 .count_btn button {
-  width: 120px;
+  width: 100px;
   border: none;
   outline: none;
   padding: 6px 2px;
@@ -158,6 +170,8 @@
   background-color: black;
   color: white;
   border-radius: 12px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .save_btn {
@@ -183,6 +197,7 @@
   gap: 16px;
 }
 .signUp_sec > section {
+  width: 300px;
   border-radius: 6px;
   box-shadow: 4px 6px 10px rgb(0, 15, 36);
   border: 1px solid gray;
@@ -201,7 +216,7 @@
   color: white;
 }
 .input_sec > input {
-  width: 320px;
+  width: 260px;
   padding: 6px 4px;
   border: 1px solid gray;
   outline: none;
@@ -219,4 +234,30 @@
   background-color: #0d6dfe;
   padding: 4px 4px;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 730px) {
+  .main_sec {
+    display: block;
+  }
+  .dashboard_sec {
+    width: auto;
+  }
+  .counter_sec {
+    width: auto;
+  }
+  .signUp_sec {
+    width: auto;
+  }
+}
+@media (max-width: 1150px) {
+  .tasbeeh_sec > button:hover {
+    background-color: #000;
+    color: white;
+    transform: scale(1);
+    width: 250px;
+  }
+  .tasbeeh_login_sec > button:hover {
+    transform: scale(1);
+  }
 }
